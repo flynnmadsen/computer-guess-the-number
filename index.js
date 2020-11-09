@@ -14,7 +14,7 @@ document.getElementById('too-low-btn').addEventListener('click', function () {
 })
 
 document.getElementById("is-correct-btn").addEventListener("click", function (){
-    setMessage("Woohoo :)")
+    setMessage("Woohoo! :)")
 } )
 
 
