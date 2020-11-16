@@ -5,12 +5,14 @@ let guess
 
 document.getElementById('too-high-btn').addEventListener('click', function () {
     // Vad ska hända när man tryckt too high?
-    setMessage("too high")
+    guess = guess - 1
+    setMessage(`Too high! Is it ${guess}`)
 })
 
 document.getElementById('too-low-btn').addEventListener('click', function () {
     // Vad ska hända när man tryckt too low?
-    setMessage("too low")
+    guess = guess + 1
+    setMessage(`Too low! Is it ${guess}`)
 })
 
 document.getElementById("is-correct-btn").addEventListener("click", function (){
@@ -26,9 +28,9 @@ function start() {
     document.getElementById('before-start').style.display = 'none'
     document.querySelector('main').style.display = 'block'
 
-    guess = 0
+    guess = MAX_NUMBER
 
-    // setMessage(`Is it ${guess}?`)
+    setMessage(`Is it ${guess}?`)
 }
 
 document
